@@ -10,7 +10,7 @@ using namespace std;
 
 
 int main() {
-
+/*
     string valor;
 
     load_from(load_from("bid_example.txt", valor))
@@ -23,7 +23,7 @@ int main() {
 
             }
         }
-    }
+    }*/
 
 
 
@@ -32,9 +32,11 @@ int main() {
     usuario_oferta0.insert(pair<string,int>("alias9",10));
     usuario_oferta0.insert(pair<string,int>("alias2",11));
     usuario_oferta0.insert(pair<string,int>("alias3",20));
-    usuario_oferta0.insert(pair<string,int>("alias8",20));
+    usuario_oferta0.insert(pair<string,int>("alias8",10));
     usuario_oferta0.insert(pair<string,int>("alias2",9));
     usuario_oferta0.insert(pair<string,int>("alias1",10));
+
+
 
 
    /* map<string, int> usuario_oferta1;
@@ -70,7 +72,7 @@ int main() {
     producto_persona.insert(pair<string, map<string, int>>("SAMSUNG TV 50",usuario_oferta3));
 */
 
-    int var = 0;
+   /* int var = 0;
     int mayor = 0, menor1 = 0, suma = 0;
 
     //Contiene las apuestas de usuario_oferta0
@@ -122,7 +124,38 @@ int main() {
 
 float promedio = suma/numeros.size();
 
-cout << "IPHONE" << mayor << "," << promedio << "," << menor1;
+cout << "IPHONE" << mayor << "," << promedio << "," << menor1;*/
+
+
+
+   map<string, map< string, int> > producto_persona;
+   producto_persona.insert(pair<string, map<string, int> >("MACBOOK PRO",usuario_oferta0));
+
+
+   for (auto it = producto_persona.begin(); it != producto_persona.end(); it++)
+   {
+       cout << it->first <<endl;
+       for(auto it2 = usuario_oferta0.begin(); it2 != usuario_oferta0.end(); it2++)
+       {
+           cout << it2->first <<" "<< it2->second << endl;
+       }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
